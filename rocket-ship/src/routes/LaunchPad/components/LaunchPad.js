@@ -9,7 +9,7 @@ export default function LaunchPad() {
 
   return (
     <div className="launchpad">
-      <ClassRocket />
+      <FunctionalRocket />
     </div>
   );
 }
