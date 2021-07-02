@@ -15,7 +15,7 @@ function timeToPositionPercent(startTime) {
 }
 
 function generateEmptyListEls(quantity) {
-  return [...Array(quantity)].map(() => <li />);
+  return [...Array(quantity)].map((_, idx) => <li key={idx} />);
 }
 
 export default function RocketCore({ initialLaunchTime }) {
