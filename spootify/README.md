@@ -36,3 +36,20 @@
 &nbsp;
 ![screenshot-desktop](https://puu.sh/GwPLE/3be580156a.png)
 <img alt="screenshot-mobile" width=400 src="https://puu.sh/GwPLS/0bcb566d23.png" />
+
+**Notes** <br>
+
+For the code to work you will need to add a `config.js` file to the `src` directory.
+An example of the `config.js` files content: <br>
+```javascript
+const config = {
+  api: {
+    baseUrl: "https://api.spotify.com/v1",
+    authUrl: "https://accounts.spotify.com/api/token",
+    clientId: "<HERE_YOUR_CLIENT_TOKEN>",
+    clientSecret: "<HERE_YOUR_CLIENT_SECRET>",
+  },
+};
+
+export default config
+```

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import DiscoverBlock from "./DiscoverBlock/components/DiscoverBlock";
 import "../styles/_discover.scss";
+import {
+  fetchCategories,
+  fetchFeaturedPlaylists,
+  fetchNewReleases,
+} from "../../../api";
 
 export default class Discover extends Component {
   constructor() {
@@ -11,6 +16,14 @@ export default class Discover extends Component {
       playlists: [],
       categories: [],
     };
+  }
+
+  async componentDidMount() {
+    const newReleases = await fetchNewReleases();
+    const playlists = await fetchFeaturedPlaylists();
+    const categories = await fetchCategories();
+
+    this.setState({ newReleases, playlists, categories });
   }
 
   render() {
