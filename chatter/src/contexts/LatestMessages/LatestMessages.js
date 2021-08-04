@@ -9,8 +9,8 @@ export function LatestMessages({ children }) {
   const [messages, setMessages] = useState(initialMessages);
 
   const setLatestMessage = useCallback((userId, value) => {
-    setMessages({ ...messages, [userId]: value });
-  }, [messages]);
+    setMessages((messages) => ({ ...messages, [userId]: value }));
+  }, []);
 
   return (
     <LatestMessagesContext.Provider value={{ messages, setLatestMessage }}>
